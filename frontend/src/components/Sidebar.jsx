@@ -20,7 +20,7 @@ const Sidebar = () => {
         </div>
         <h1 className="text-xl mt-2 font-bold">
           {" "}
-          {name?.split("")[0].toUpperCase() + name.slice(1)}{" "}
+          {name?.split("")[0].toUpperCase() + name?.slice(1)}{" "}
         </h1>
         <p className="text-xs my-1">Repwise member</p>
       </section>
