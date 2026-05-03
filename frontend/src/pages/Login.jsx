@@ -47,6 +47,12 @@ export default function Login() {
       }),
     });
     const data = await res.json();
+    if(!res.ok){
+      setShowPopup(true);
+      setShowError(true); 
+      setMsg(data.message || "Login failed. Please try again.");
+      return;
+    }
     localStorage.setItem("token", data.token);
     localStorage.setItem("name", data.name);
     setShowPopup(true);
