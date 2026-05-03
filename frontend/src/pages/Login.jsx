@@ -56,13 +56,15 @@ export default function Login() {
     localStorage.setItem("token", data.token);
     localStorage.setItem("name", data.name);
     setShowPopup(true);
-    setMsg(data.message);
+    setMsg(
+  typeof data.message === "string"
+    ? data.message
+    : "Something went wrong"
+);
     if (data.message != "login Successfull,Redirecting to dashboard...") {
       setShowError(true);
     }
   };
-  const token = localStorage.getItem("token");
-  const userName = localStorage.getItem("name");
 
   if (showPopup) {
     setTimeout(() => {
@@ -131,7 +133,9 @@ export default function Login() {
                 <p
                   className={`text-center font-semibold ${showError ? "text-red-500" : "text-green-500"}`}
                 >
-                  {msg}
+                 {
+                  showError ? "Login failed" : "redirecting to dashboard..."
+                 }
                 </p>
               )}
               <input
@@ -173,7 +177,10 @@ export default function Login() {
                 <p
                   className={`text-center font-semibold ${showError ? "text-red-500" : "text-green-500"}`}
                 >
-                  {msg}
+                  {
+                    showError? "Signup failed. Please try again."
+                      : "User created successfully. please login to continue."
+                  }
                 </p>
               )}
               <input

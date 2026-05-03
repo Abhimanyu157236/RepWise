@@ -9,8 +9,8 @@ router.post("/signup", (req, res) => {
   try {
     bcrypt.genSalt(10, (err, salt) => {
       bcrypt.hash(password, salt, async (err, hash) => {
-        const user = new User({ name, email, password: hash });
-        user.save();
+        const user = await new User({ name, email, password: hash });
+        await user.save();
         res
           .status(201)
           .json({ message: "User created successfully", user: user });
@@ -26,7 +26,7 @@ router.post("/login", async (req, res) => {
   try {
     const existingUser = await User.findOne({ email });
     if (!existingUser) {
-      res.status(404).json({ message: "Something went wrong" });
+     return res.status(404).json({ message: "Something went wrong" });
     }
     bcrypt.compare(password, existingUser.password, (err, result) => {
       if (result) {
@@ -39,15 +39,16 @@ router.post("/login", async (req, res) => {
           name: existingUser.name,
           token: token,
           message: "login Successfull,Redirecting to dashboard...",
-          existingUser,
         });
       } else {
-        res.status(404).json({ message: "Something Went wrong" });
+        return res.status(404).json({ message: "Something Went wrong" });
       }
     });
-  } catch (error) {
-    res.status(500).json({ message: error });
-  }
+  }catch (error) {
+  res.status(500).json({
+    message: error.message || "Server error"
+  });
+}
 });
 
 export default router;
