@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import WaterTracker from "./WaterLogger";
 import WaterLogger from "./WaterLogger";
-import StepsLogger from "./stepsLogger";
+import StepsLogger from "./StepsLogger";
 import SleepLogger from "./SleepLogger";
 
 const Activity = () => {
