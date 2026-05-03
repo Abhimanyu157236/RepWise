@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import StepDoughnutChart from "./DoughnutChart";
 
-const stepsLogger = ({ steps, plus, minus }) => {
+const StepsLogger = ({ steps, plus, minus }) => {
   const [totalSteps, setTotalSteps] = useState(5000);
   const remaining = totalSteps - steps;
 
@@ -42,4 +42,4 @@ const stepsLogger = ({ steps, plus, minus }) => {
   );
 };
 
-export default stepsLogger;
+export default StepsLogger;

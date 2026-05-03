@@ -27,7 +27,6 @@ export default function Login() {
       }),
     });
     const data = await res.json();
-    console.log(data);
     setShowPopup(true);
     setMsg(data.message);
     if (data.message != "User created successfully") {
@@ -57,9 +56,7 @@ export default function Login() {
     }
   };
   const token = localStorage.getItem("token");
-  console.log("token", token);
   const userName = localStorage.getItem("name");
-  console.log("", userName);
 
   if (showPopup) {
     setTimeout(() => {
