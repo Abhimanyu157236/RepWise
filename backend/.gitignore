@@ -1,0 +1,49 @@
+# Node modules
+node_modules/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Environment variables (IMPORTANT)
+.env
+.env.*
+!.env.example
+
+# Build / dist
+dist/
+build/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+
+# MongoDB local files (agar local db use kar raha hai)
+data/
+*.db
+
+# Temporary files
+tmp/
+temp/
+
+# Coverage (testing)
+coverage/
+
+# Optional: uploads folder (agar tu images/files store kar raha hai)
+uploads/
+
+# Optional: config secrets
+config/secrets.js

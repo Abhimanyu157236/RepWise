@@ -1,0 +1,15 @@
+body{
+ background: linear-gradient(
+  135deg,
+  #050015 0%,
+  #030016 40%,
+  #0b0438 70%,
+  #180032 100%
+);
+}
+::-webkit-scrollbar {
+  width: 1px;
+}
+::-webkit-scrollbar {
+  color:blue;
+}

@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Sirf custom-scroll class ke liye scrollbar style */
+.custom-scroll::-webkit-scrollbar {
+  width: 4px;  /* scrollbar ki motai */
+
+
+}
+
+.custom-scroll::-webkit-scrollbar-track {
+  background: #ff1101; /* Tailwind ka gray-100 */
+    border-radius: 16px;
+    
+    
+}
+
