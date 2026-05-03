@@ -5,7 +5,7 @@ import MobileNavbar from "../components/MobileNavbar";
 import Sidebar from "../components/Sidebar";
 import Header from "../components/Header";
 import Activity from "../components/Activity";
-import StepsLogger from "../components/stepsLogger";
+import stepsLogger from "../components/stepsLogger";
 import { PageContext } from "../context/PageProvider";
 import Workouts from "../components/Workouts";
 import FitNotes from "../components/FitNotes";
