@@ -23,7 +23,7 @@ const Dashboard = () => {
   const fetchFoodData = async () => {
     try {
       const res = await fetch(
-        "http://10.186.250.225:5000/api/v1/fetch/fetch-calories",
+        "https://repwise-58m2.onrender.com/api/v1/fetch/fetch-calories",
         {
           headers: {
             "Content-Type": "application/json",
@@ -51,7 +51,7 @@ const Dashboard = () => {
   const fetchActivityData = async () => {
     try {
       const res = await fetch(
-        "http://10.186.250.225:5000/api/v1/fetch/fetch-activity",
+        "https://repwise-58m2.onrender.com/api/v1/fetch/fetch-activity",
         {
           headers: {
             "Content-Type": "application/json",

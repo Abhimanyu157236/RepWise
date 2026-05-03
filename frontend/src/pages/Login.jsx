@@ -15,7 +15,7 @@ export default function Login() {
 
   const handleSignup = async (e) => {
     e.preventDefault();
-    const res = await fetch(`http://10.186.250.225:5000/api/v2/user/signup`, {
+    const res = await fetch(`https://repwise-58m2.onrender.com/api/v2/user/signup`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -37,7 +37,7 @@ export default function Login() {
 
   const handleLogin = async (e) => {
     e.preventDefault();
-    const res = await fetch(`http://10.186.250.225:5000/api/v2/user/login`, {
+    const res = await fetch(`https://repwise-58m2.onrender.com/api/v2/user/login`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

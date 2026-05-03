@@ -81,7 +81,7 @@ const Food = () => {
   const saveMeal = async () => {
     try {
       const res = await fetch(
-        "http://10.186.250.225:5000/api/v1/track/track-calories",
+        "https://repwise-58m2.onrender.com/api/v1/track/track-calories",
         {
           method: "POST",
           headers: {
@@ -109,7 +109,7 @@ const Food = () => {
   const fetchProfile = async () => {
     try {
       const res = await fetch(
-        "http://10.186.250.225:5000/api/v2/user/get-profile",
+        "https://repwise-58m2.onrender.com/api/v2/user/get-profile",
         {
           headers: {
             "Content-Type": "application/json",

@@ -40,7 +40,7 @@ const Profile = () => {
   const saveProfile = async () => {
     try {
       const res = await fetch(
-        "http://10.186.250.225:5000/api/v2/user/profile-router",
+        "https://repwise-58m2.onrender.com/api/v2/user/profile-router",
         {
           method: "POST",
           headers: {
@@ -70,7 +70,7 @@ const Profile = () => {
   const fetchProfile = async () => {
     try {
       const res = await fetch(
-        "http://10.186.250.225:5000/api/v2/user/get-profile",
+        "https://repwise-58m2.onrender.com/api/v2/user/get-profile",
         {
           headers: {
             "Content-Type": "application/json",

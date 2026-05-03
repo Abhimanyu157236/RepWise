@@ -23,7 +23,7 @@ const Workouts = () => {
   const trackWorkout = async () => {
     try {
       const res = await fetch(
-        "http://10.186.250.225:5000/api/v1/track/track-workout",
+        "https://repwise-58m2.onrender.com/api/v1/track/track-workout",
         {
           method: "POST",
           headers: {
