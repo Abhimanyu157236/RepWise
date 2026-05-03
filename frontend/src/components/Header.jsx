@@ -11,10 +11,10 @@ const Header = () => {
       <p className="text-sm md:text-md px-6">
         {" "}
         Welcome back,{" "}
-        <b> {name.split("")[0].toUpperCase() + name.slice(1)} </b>{" "}
+        <b>  {name?.split("")[0].toUpperCase() + name.slice(1)} </b>{" "}
       </p>
       <div className="hidden bg-sky-950 rounded-full w-9 h-9 md:flex items-start justify-center text-md text-sky-500 font-extralight py-1 relative left-[70%] ">
-        {name.split("")[0].toUpperCase()}
+        {name?.split("")[0].toUpperCase()}
       </div>
     </div>
   );

@@ -16,11 +16,11 @@ const Sidebar = () => {
     <div className="hidden md:block h-full w-1/5 text-white bg-gradient-to-br from-violet-900/20 to-purple-950/30 py-10 rounded-xl shadow-inner shadow-white/20">
       <section className="w-full flex flex-col items-center mb-6">
         <div className="bg-sky-950 rounded-full w-24 h-24 flex items-start justify-center text-7xl text-sky-500 font-extralight py-1 shadow-md shadow-white/10">
-          {name.split("")[0].toUpperCase()}
+          {name?.split("")[0].toUpperCase()}
         </div>
         <h1 className="text-xl mt-2 font-bold">
           {" "}
-          {name.split("")[0].toUpperCase() + name.slice(1)}{" "}
+          {name?.split("")[0].toUpperCase() + name.slice(1)}{" "}
         </h1>
         <p className="text-xs my-1">Repwise member</p>
       </section>
