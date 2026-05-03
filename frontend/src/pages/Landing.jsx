@@ -8,6 +8,16 @@ export function Landing({ text = "RepWise." }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const navigate = useNavigate();
+ 
+  const token = localStorage.getItem("token");
+    const redirect = () => {
+    if (token) {
+    navigate("/dashboard");
+  }
+  else{
+    navigate("/login");
+  }
+}
 
   return (
     <div className="w-full bg-[url('/bg.jpg')] object-cover  text-white flex flex-col justify-center items-center h-screen ">
@@ -38,7 +48,7 @@ export function Landing({ text = "RepWise." }) {
           delay: 1.2,
         }}
       >
-        <p onClick={() => navigate("/dashboard")}>Get Started</p>
+        <p onClick={redirect}>Get Started</p>
       </motion.div>
 
       <motion.p
